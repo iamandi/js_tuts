@@ -1,4 +1,7 @@
+const fibNum = process.argv[2] || 5;
+
 const fibArr = [];
+
 const addNums = (index, prev, curr) => {
   index--;
   fibArr.push(prev);
@@ -9,6 +12,6 @@ const addNums = (index, prev, curr) => {
   return curr;
 };
 
-const finalNum = addNums(45, 0, 1);
+const finalNum = addNums(fibNum, 0, 1);
 console.log(fibArr);
 console.log(finalNum);
