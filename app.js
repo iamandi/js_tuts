@@ -209,3 +209,11 @@ const { pizza, cupcake } = require("./awesome-package");
 const defaultObj = require("./awesome-package").default;
 log(pizza);
 log(defaultObj);
+
+const { readFile, writeFile } = require("fs").promises;
+
+async function hello() {
+  const file = await readFile("./fibonacci.js", "utf-8");
+  console.log("file", file);
+}
+hello();
